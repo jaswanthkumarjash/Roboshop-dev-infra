@@ -14,10 +14,6 @@ variable "sg_description" {
     default = "Security group for Roboshop application"
 }
 
-variable "vpc_id" {
-    type = string
-}
-
 variable "project_name" {
   type        = string
   default     = "roboshop"
