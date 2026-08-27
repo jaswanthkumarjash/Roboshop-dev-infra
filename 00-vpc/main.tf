@@ -5,7 +5,7 @@ module "vpc" {
     environment = var.environment
     vpc_tags = merge(
         var.vpc_tags,
-        local.common_name,
+        local.common_tags,
         {
             Name = "${local.common_name}-vpc"
         }
