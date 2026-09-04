@@ -69,7 +69,7 @@ resource "terraform_data" "redis" {
     host     = aws_instance.redis.private_ip
   }
 
-  # terraform copies this file to mongodb server
+  # terraform copies this file to redis server
   provisioner "file" {
     source = "bootstrap.sh"
     destination = "/tmp/bootstrap.sh"
@@ -113,7 +113,7 @@ resource "terraform_data" "rabbitmq" {
     host     = aws_instance.rabbitmq.private_ip
   }
 
-  # terraform copies this file to mongodb server
+  # terraform copies this file to rabbitmq server
   provisioner "file" {
     source = "bootstrap.sh"
     destination = "/tmp/bootstrap.sh"
